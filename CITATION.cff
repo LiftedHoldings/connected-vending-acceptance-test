@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this operational worksheet, please cite the maintained web version."
+title: "Connected Vending Go-Live Acceptance Test"
+type: software
+authors:
+  - family-names: "Kemp"
+    given-names: "Daniel-Cameron"
+version: "1.0.0"
+date-released: 2026-08-02
+url: "https://agevend.com/connected-vending-go-live-test.html"
+repository-code: "https://github.com/LiftedHoldings/connected-vending-acceptance-test"
+license: "MIT"
