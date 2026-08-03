@@ -6,9 +6,9 @@ authors:
   - family-names: "Kemp"
     given-names: "Daniel-Cameron"
   - name: "AgeVend LLC"
-version: "1.0.0"
-date-released: 2026-08-02
-url: "https://agevend.com/connected-vending-go-live-test.html"
+version: "1.1.0"
+date-released: 2026-08-03
+url: "https://liftedholdings.github.io/connected-vending-acceptance-test/"
 repository-code: "https://github.com/LiftedHoldings/connected-vending-acceptance-test"
 license: "MIT"
 keywords:
@@ -16,4 +16,4 @@ keywords:
   - "acceptance testing"
   - "payment reconciliation"
   - "remote operations"
-abstract: "A printable acceptance worksheet for documenting customer, payment, dispensing, inventory, refund, fault, and settlement handoffs before a connected vending route goes live."
+abstract: "A printable acceptance worksheet for documenting customer, payment, dispensing, inventory, refund, fault, and settlement handoffs before a connected vending route goes live. The maintained customer-facing version is https://agevend.com/connected-vending-go-live-test.html; this open companion preserves the worksheet's operational, non-universal scope."
