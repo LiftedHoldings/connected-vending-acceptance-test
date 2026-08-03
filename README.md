@@ -7,6 +7,9 @@ should reconcile before opening a configured connected-vending deployment.
 The maintained web version is available at
 [AgeVend's Connected Vending Go-Live Acceptance Test](https://agevend.com/connected-vending-go-live-test.html).
 
+The public, plain-HTML companion for this open worksheet is available at
+https://liftedholdings.github.io/connected-vending-acceptance-test/.
+
 ## Purpose
 
 Unattended retail is a chain of handoffs. A reader approval does not, by

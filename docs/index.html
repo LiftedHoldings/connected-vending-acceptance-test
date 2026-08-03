@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connected Vending Go-Live Acceptance Test</title>
+  <meta name="description" content="A free, printable acceptance-test worksheet for documenting the customer, payment, dispensing, inventory, refund, fault, and settlement handoffs in a connected vending deployment.">
+  <meta name="robots" content="index,follow,max-snippet:-1">
+  <link rel="canonical" href="https://liftedholdings.github.io/connected-vending-acceptance-test/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Connected Vending Go-Live Acceptance Test">
+  <meta property="og:description" content="A printable operational worksheet for testing the handoffs behind a connected vending transaction.">
+  <meta property="og:url" content="https://liftedholdings.github.io/connected-vending-acceptance-test/">
+  <meta name="theme-color" content="#063c3a">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"CreativeWork","@id":"https://liftedholdings.github.io/connected-vending-acceptance-test/#worksheet","name":"Connected Vending Go-Live Acceptance Test","description":"A printable operational worksheet for documenting customer, payment, dispensing, inventory, refund, fault, and settlement handoffs before a connected vending deployment opens.","url":"https://liftedholdings.github.io/connected-vending-acceptance-test/","inLanguage":"en-US","license":"https://opensource.org/licenses/MIT","author":{"@type":"Organization","name":"Lifted Holdings","url":"https://liftedholdings.com/"},"isBasedOn":"https://github.com/LiftedHoldings/connected-vending-acceptance-test","relatedLink":"https://agevend.com/connected-vending-go-live-test.html"}
+  </script>
+  <style>
+    :root { --ink:#102827; --deep:#063c3a; --teal:#00b69b; --mist:#e8f2ef; --line:#bed2cc; --paper:#fbfcfa; --muted:#5c7470; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color:#086f65; text-underline-offset:3px; }
+    a:focus-visible { outline:3px solid #f2bd3a; outline-offset:3px; }
+    .masthead { background:var(--deep); color:#fff; border-bottom:5px solid var(--teal); }
+    .shell { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    .nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px; font-size:.9rem; }
+    .brand { color:white; font-weight:800; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; }
+    .nav a:not(.brand) { color:#caefea; }
+    .hero { padding:78px 0 65px; display:grid; grid-template-columns:1.4fr .8fr; gap:54px; align-items:end; }
+    .eyebrow { margin:0 0 18px; color:#8cddd0; font-size:.75rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { max-width:760px; margin:0; font-family:Georgia, "Times New Roman", serif; font-size:clamp(2.7rem, 6vw, 5.6rem); font-weight:500; letter-spacing:-.055em; line-height:.96; }
+    .lede { max-width:650px; margin:25px 0 0; color:#d4ebe7; font-size:1.16rem; }
+    .proof-card { padding:24px; background:#0d5150; border:1px solid #39807a; border-radius:3px; }
+    .proof-card strong { display:block; color:#8cddd0; font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; }
+    .proof-card p { margin:10px 0 0; font-size:1.04rem; }
+    main { padding:64px 0 82px; }
+    .intro { display:grid; grid-template-columns:.72fr 1.28fr; gap:62px; padding-bottom:58px; border-bottom:1px solid var(--line); }
+    h2 { margin:0; font-family:Georgia, "Times New Roman", serif; font-size:clamp(2rem, 4vw, 3.4rem); font-weight:500; letter-spacing:-.035em; line-height:1.03; }
+    .intro p { margin:0; font-size:1.12rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .button { display:inline-block; padding:12px 17px; border:1px solid var(--deep); border-radius:2px; color:white; background:var(--deep); font-weight:750; text-decoration:none; }
+    .button.secondary { color:var(--deep); background:transparent; }
+    .sequence { display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); gap:1px; margin:58px 0; background:var(--line); border:1px solid var(--line); }
+    .state { min-height:178px; padding:19px 16px; background:var(--mist); }
+    .state b { display:block; color:var(--deep); font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; }
+    .state span { display:block; margin-top:12px; font-size:.95rem; line-height:1.35; }
+    .method { display:grid; grid-template-columns:1fr 1fr; gap:25px; }
+    .method section { padding:30px; border:1px solid var(--line); }
+    .method h3 { margin:0 0 12px; color:var(--deep); font-size:1.02rem; }
+    .method p { margin:0; color:var(--muted); }
+    .limits { margin-top:26px; padding:27px 30px; background:#f4f7f5; border-left:5px solid #d9a92b; }
+    .limits p { margin:0; color:#405956; }
+    footer { padding:30px 0 45px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+    footer p { max-width:900px; margin:0; }
+    @media (max-width:800px) { .hero,.intro,.method { grid-template-columns:1fr; gap:28px; } .hero { padding:52px 0 46px; } .sequence { grid-template-columns:repeat(2,1fr); } .state:last-child { grid-column:span 2; } }
+    @media (max-width:480px) { .shell { width:min(100% - 28px,1120px); } .nav { align-items:flex-start; flex-direction:column; justify-content:center; padding:15px 0; } .sequence { grid-template-columns:1fr; } .state:last-child { grid-column:auto; } }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="shell nav"><a class="brand" href="https://github.com/LiftedHoldings/connected-vending-acceptance-test">Lifted Holdings / Open worksheet</a><a href="https://agevend.com/connected-vending-go-live-test.html">Maintained web version ↗</a></div>
+    <div class="shell hero">
+      <div><p class="eyebrow">Connected vending operations</p><h1>Approved is not the same as dispensed.</h1><p class="lede">A printable, evidence-led worksheet for proving that the customer, payment, physical delivery, inventory, recovery, and settlement records agree before a machine opens.</p></div>
+      <aside class="proof-card"><strong>Use it at go-live</strong><p>Capture the expected result, the observed result, and the accountable owner for each transaction state. A reader approval alone is not a route-readiness result.</p></aside>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="intro" aria-labelledby="why-title"><h2 id="why-title">One transaction. Seven handoffs to reconcile.</h2><div><p>Connected vending ties together equipment, a customer interface, a payment path, inventory records, support actions, and settlement. This worksheet helps an operator test the handoffs as a system—not just whether a payment reader accepts a tap.</p><div class="actions"><a class="button" href="https://github.com/LiftedHoldings/connected-vending-acceptance-test/blob/main/acceptance-test-template.md">Read the open template</a><a class="button secondary" href="https://agevend.com/connected-vending-go-live-test.html">Use the maintained worksheet</a></div></div></section>
+    <section class="sequence" aria-label="Transaction states to test"><div class="state"><b>01 · Declined</b><span>No vend command should start before a declined payment is resolved.</span></div><div class="state"><b>02 · Approved / dispensed</b><span>Payment, delivery, inventory, and settlement should agree.</span></div><div class="state"><b>03 · Approved / no dispense</b><span>Document the customer recovery and inventory correction path.</span></div><div class="state"><b>04 · Unknown</b><span>Test timeout and interruption states before customers encounter them.</span></div><div class="state"><b>05 · Duplicate attempt</b><span>Confirm the system prevents or explains repeat charges and vends.</span></div><div class="state"><b>06 · Refund</b><span>Capture how a reversal or refund becomes visible to the customer.</span></div><div class="state"><b>07 · Reconcile</b><span>Close the loop between route evidence, payment records, and settlement.</span></div></section>
+    <section class="method" aria-label="How to use the worksheet"><section><h3>Before testing</h3><p>Record the actual machine, location, product configuration, payment route, and expected evidence. Assign a decision owner for every exception.</p></section><section><h3>During testing</h3><p>Attach the customer, machine, payment, inventory, support, and settlement record for each attempted state. Keep mismatches open until explained.</p></section><section><h3>After a change</h3><p>Repeat the successful path and every impacted exception after meaningful equipment, catalog, payment, integration, or policy changes.</p></section><section><h3>Keep the record</h3><p>Use the signed, dated worksheet as an operational record for the exact deployment—not as a claim about another machine or route.</p></section></section>
+    <aside class="limits"><p><strong>Scope:</strong> This is a practical operational worksheet, not legal, tax, payment, privacy, or regulatory advice; not a universal technical standard; and not a performance benchmark. Product, venue, equipment, payment, network, and local requirements can differ by deployment.</p></aside>
+  </main>
+  <footer><div class="shell"><p>Published by <a href="https://liftedholdings.com/">Lifted Holdings</a>. The MIT-licensed source is maintained on <a href="https://github.com/LiftedHoldings/connected-vending-acceptance-test">GitHub</a>. For the customer-facing maintained worksheet, visit <a href="https://agevend.com/connected-vending-go-live-test.html">AgeVend’s connected-vending go-live acceptance test</a>.</p></div></footer>
+</body>
+</html>
